@@ -25,9 +25,10 @@ namespace Sometimes_EventNoRP
         {
             
             System.Random random = new System.Random();
-            int roundStatus = random.Next(0, _config.NoRPPercentage);
+            int randomValue = random.Next(100);
+            bool isNoRP = randomValue < _config.NoRPPercentage;
             
-            string message = roundStatus == 0 ? _config.MessageNoRP : _config.MessageRP;
+            string message = isNoRP ? _config.MessageNoRP : _config.MessageRP;
 
             foreach (var player in Player.List)
             {
