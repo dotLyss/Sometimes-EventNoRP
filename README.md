@@ -2,12 +2,12 @@
 
 ## Description
 
-`Sometimes-EventNoRP` est un plugin C# (.NET) inclus dans cette solution. Il utilise notamment `Northwood.LabAPI` et `YamlDotNet` (packages inclus dans le répertoire `packages/`) pour gérer des événements et fournir une option NoRP/gestion d'événements côté serveur.
+`Sometimes-EventNoRP` est un plugin SCP: Secret Laboratory. Il utilise notamment `Northwood.LabAPI` et `YamlDotNet` pour gérer des événements et fournir une option NoRP/gestion d'événements côté serveur.
 
 ### ⚠️ Clause de non-responsabilité
 Ce projet est fourni "tel quel", sans aucune garantie, explicite ou implicite.
 
-L’auteur (falous-dev) ne peut être tenu responsable des dommages, pertes de données, erreurs, pannes ou tout autre problème résultant de l’utilisation, de la mauvaise utilisation ou de la modification de ce code.
+L’auteur ne peut être tenu responsable des dommages, pertes de données, erreurs, pannes ou tout autre problème résultant de l’utilisation, de la mauvaise utilisation ou de la modification de ce code.
 
 En utilisant ce projet, vous acceptez l’entière responsabilité de son usage. En cas de problème, cela relève de votre propre responsabilité.
 
@@ -15,16 +15,13 @@ Aucune assistance, garantie de fonctionnement, ni obligation de correction n’e
 
 ## Fonctionnalités
 
-- Gestion d'événements liée à l'API Lab.
+- Gestion d'événements liée à LabAPI.
 - Fichiers de configuration centralisés (voir `Config.cs`).
-- Conçu pour être compilé avec Visual Studio / MSBuild et déployé sur le serveur utilisant LabAPI.
 - Le plugin permet de créer des games NoRP automatiquement en suivant un pourcentage de chance
 
 ## Prérequis
 
-- Windows
-- Visual Studio (ou MSBuild) compatible avec .NET Framework ciblé
-- .NET Framework 4.x (vérifier la configuration du projet dans `Sometimes-EventNoRP.csproj`)
+- Visual Studio Code/Visual Studio/JetBrain Rider compatible avec .NET Framework v4.8.
 
 Les dépendances empaquetées sont disponibles dans le dossier `packages/` :
 - `Northwood.LabAPI.1.1.5`
@@ -34,9 +31,9 @@ Les dépendances empaquetées sont disponibles dans le dossier `packages/` :
 
 1. Cloner le dépôt :
 
-   git clone <url-du-dépôt>
+   git clone `https://github.com/Kiore51/Sometimes-EventNoRP`
 
-2. Ouvrir la solution `Sometimes-EventNoRP.sln` dans Visual Studio.
+2. Ouvrir la solution `Sometimes-EventNoRP.sln` dans Visual Studio/JetBrain Rider ou ouvrir le dossier depuis Visual Studio Code.
 3. Restaurer les packages NuGet si nécessaire (les bibliothèques sont déjà incluses dans `packages/`).
 4. Compiler la solution en mode `Debug` ou `Release`.
 
@@ -54,7 +51,7 @@ Le binaire compilé se trouve dans `Sometimes-EventNoRP/bin/Debug/` (ou `bin/Rel
 
 ## Structure du projet (extraits)
 
-- `Sometimes-EventNoRP.sln` — solution Visual Studio
+- `Sometimes-EventNoRP.sln` — solution Visual Studio/JetBrain Rider
 - `Sometimes-EventNoRP/` — projet principal
   - `Plugin.cs` — point d'entrée du plugin
   - `Config.cs` — configuration
